@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Fortnite Tracker</title>
+</head>
+
+<body>
+    
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+                <img src="C:\Users\pepi\Desktop\Fortnite app\images\logo.png" width="90" height="50" alt="logo">             
+                <input type="button" value="Home" class="btn btn-dark" id="btnHome">
+                <input type="button" value="News" class="btn btn-dark" id="btnNews">
+                <input type="button" value="Challenges" class="btn btn-dark" id="btnChallenges">
+                <input type="button" value="Daily Store" class="btn btn-dark" id="btnDailyStore">
+                <input type="button" value="Upcoming Items" class="btn btn-dark" id="btnUpcomingItems">
+                <input type="button" value="Random items" class="btn btn-dark" id="btnRandomItems">
+                <a href="index.html" class="btn btn-dark" id="weapons">Weapons</a>
+            </nav>
+        </header>
+
+        
+        <span class="span"></span>
+        <button type="button" class="btn btn-primary" id="quickSort">Quick</button>
+        <button type="button" class="btn btn-primary" id="btnSortByTable">Table</button>
+        <div class="dropdown">
+            <button class="dropbtn, btn btn-primary">Filter by rarity</button>
+            <div class="dropdown-content">
+                <a href="#" id="commonFilter">Common</a>
+                <a href="#" id="uncommonFilter">Uncommon</a>
+                <a href="#" id="rareFilter">Rare</a>
+                <a href="#" id="epicFilter">Epic</a>
+                <a href="#" id="legendaryFilter">Legendary</a>
+            </div>
+        </div>
+
+
+<div class="container bg-dark">
+
+
+        <div id="stats" class="quickSort">
+        </div>
+
+        <div class="sortByTable">
+            <table class="table table-sm table-dark table-bordered" id="table">
+                <thead>
+                    <tr>
+                        <th>Weapon</th>
+                        <th>Name</th>
+                        <th>Rarity</th>
+                        <th>DPS</th>
+                        <th>Damage</th>
+                        <th>ENV Damage</th>
+                        <th>Fire Rate</th>
+                        <th>Magazine</th>
+                        <th>Reload time</th>
+                    </tr>
+                </thead>
+                <tbody id="bodytable">
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <div>
+            <table class="table table-sm table-dark table-bordered" id="table">
+                <thead id="theadRarity">
+                    <tr>
+                        <th>Weapon</th>
+                        <th>Name</th>
+                        <th>Rarity</th>
+                        <th>DPS</th>
+                        <th>Damage</th>
+                        <th>ENV Damage</th>
+                        <th>Fire Rate</th>
+                        <th>Magazine</th>
+                        <th>Reload time</th>
+                    </tr>
+                </thead>
+                <tbody id="sortByRarity">
+
+                </tbody>
+            </table>
+        </div>
+
+
+</div>
+
+
+
+</body>
+
+</html>

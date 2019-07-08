@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Fortnite Tracker</title>
+</head>
+<!-- Head -->
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <img src="..\images\logo.png" width="90" height="50" alt="logo">
+        <input type="button" value="Home" class="btn btn-dark" id="btnHome">
+        <input type="button" value="News" class="btn btn-dark" id="btnNews">
+        <input type="button" value="Challenges" class="btn btn-dark" id="btnChallenges">
+        <input type="button" value="Daily Store" class="btn btn-dark" id="btnDailyStore">
+        <input type="button" value="Upcoming Items" class="btn btn-dark" id="btnUpcomingItems">
+        <div class="dropdown">
+            <button class="dropbtn, btn btn-dark" value="Weapons" id="dropdownMenuButton">Weapons</button>
+            <div class="dropdown-content">
+                <a href="#" id="commonFilter">Common</a>
+                <a href="#" id="uncommonFilter">Uncommon</a>
+                <a href="#" id="rareFilter">Rare</a>
+                <a href="#" id="epicFilter">Epic</a>
+                <a href="#" id="legendaryFilter">Legendary</a>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Nav Bar -->
+
+
+    <!-- Cover Photo -->
+    <br><br><br><br>
+    <img src="../images/cover1.png" alt="cover" class="cover-img">
+    <br><br>
+    <!-- Cover Photo -->
+
+
+    <br>
+    <div id="bodyContainerHomeView">
+
+        <!-- Search field for Compare -->
+        <form id="searchForm">
+            <input id="searchLabel" type="search" placeholder="Write your acount name here!" aria-label="Search">
+            <button id="searchBtn" type="button">Search</button>
+            <button id="compare" type="button">Compare</button>
+        </form>
+
+        <form id="compareForm">
+            <input type="search" placeholder="Write another acount to compare them!" id="compareLabel">
+            <!-- <input type="search" placeholder="Search" id="compareLabelTwo"> -->
+            <button id="compareBtn" type="button">Compare</button>
+        </form>
+        <!-- Search field for Compare -->
+
+        <br><br>
+
+        <div class="container bg-dark">
+
+            <!-- Compare code-->
+            <div id="searchCompareDiv">
+                <div class="row">
+                    <div id="mainInfo" class="col-sm">
+                    </div>
+
+                    <div id="compareInfo" class="col-sm">
+                        <h4>Add player to compare</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Compare code-->
+
+
+            <!-- News -->
+            <div id="newsDiv1">
+                <h2>News</h2>
+                <h5>Read about whats new in Fortnite</h5>
+                <div class="row">
+                    <div class="col-sm" id="news0"></div>
+                    <div class="col-sm" id="news1"></div>
+                    <div class="col-sm" id="news2"></div>
+                    <div class="col-sm" id="news3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm" id="news4"></div>
+                    <div class="col-sm" id="news5"></div>
+                    <div class="col-sm" id="news6"></div>
+                    <div class="col-sm" id="news7"></div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm" id="news8"></div>
+                    <div class="col-sm" id="news9"></div>
+                    <div class="col-sm" id="news10"></div>
+                    <div class="col-sm" id="news11"></div>
+                </div>
+
+            </div>
+            <!-- News -->
+
+            <hr>
+
+            <!-- Challenges table -->
+
+            <div class="row" id="challengesDiv">
+                <div id="dataDiv" class="col">
+                    <h2>Challenges</h2>
+                    <h5>Check out the current week challenges in the game</h5>
+                    <br>
+                    <table id="tab" class="table table-sm table-dark table-bordered"></table>
+                </div>
+            </div>
+
+            <!-- Challenges table -->
+            <hr>
+
+            <!-- Daily store: Featured items + daily items -->
+            <div id="dailyStore">
+                <h2>Daily Store</h2>
+                <h5>Items available at the store now</h5>
+                <div class="row">
+                    <div id="dataDiv2" class="col">
+                        <table id="tab2" class="table table-sm table-dark table-bordered"></table>
+                    </div>
+
+                    <div id="dataDiv3" class="col">
+                        <table id="tab3" class="table table-sm table-dark table-bordered"></table>
+                    </div>
+                </div>
+            </div>
+            <!-- Daily store: Featured items + daily items-->
+            <hr>
+
+            <!-- Upcoming items -->
+            <div id="upcomingItems">
+                <h2>Upcoming items</h2>
+                <h5>Items that are coming soon</h5>
+
+                <div class="row">
+                    <div class="col-sm" id="upcomingItems0"></div>
+                    <div class="col-sm" id="upcomingItems1"></div>
+                    <div class="col-sm" id="upcomingItems2"></div>
+                    <div class="col-sm" id="upcomingItems3"></div>
+                    <div class="col-sm" id="upcomingItems4"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm" id="upcomingItems5"></div>
+                    <div class="col-sm" id="upcomingItems6"></div>
+                    <div class="col-sm" id="upcomingItems7"></div>
+                    <div class="col-sm" id="upcomingItems8"></div>
+                    <div class="col-sm" id="upcomingItems9"></div>
+                </div>
+            </div>
+            <!-- Upcoming items -->
+            
+
+        </div>
+    </div>
+
+
+<!-- Weapons -->
+    <div id="weaponFilterByRarity">
+        <div id="stats" class="quickSort">
+        </div>
+        <div id="rarityDiv" class="sortByTable">
+            <table class="table table-sm table-dark table-bordered" id="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Weapon</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Rarity</th>
+                        <th scope="col">DPS</th>
+                        <th scope="col">Damage</th>
+                        <th scope="col">ENV Damage</th>
+                        <th scope="col">Fire Rate</th>
+                        <th scope="col">Magazine</th>
+                        <th scope="col">Reload time</th>
+                    </tr>
+                </thead>
+                <tbody id="bodytable">
+
+                </tbody>
+            </table>
+
+        </div>
+        <table class="table table-bordered" id="table">
+            <thead id="theadRarity">
+                <tr>
+                    <th scope="col">Weapon</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Rarity</th>
+                    <th scope="col">DPS</th>
+                    <th scope="col">Damage</th>
+                    <th scope="col">ENV Damage</th>
+                    <th scope="col">Fire Rate</th>
+                    <th scope="col">Magazine</th>
+                    <th scope="col">Reload time</th>
+                </tr>
+            </thead>
+            <tbody id="sortByRarity">
+
+            </tbody>
+        </table>
+    </div>
+<!-- Weapons -->
+
+
+    <br>
+    <br>
+
+    <!-- Image -->
+    <img src="../images/cover4.png" alt="" width="60%">
+    <!-- Image -->
+
+    <!-- Footer -->
+    <footer class="page-footer  bg-dark">
+        <div class="footer-copyright text-center py-3">
+            <h5><span>© 2019 Copyright: Petar Donevski Dragana Siskovska Viktor Mijalcev</span></h5>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+
+
+</body>
+
+
+</html>
