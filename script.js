@@ -426,7 +426,7 @@ $(document).ready(function () {
                         showuser(resUidCompare, true)
                     })
                 } catch (err) {
-                    console.log(err);
+                    //console.log(err);
                     $("#compareInfo").empty();
                     $("#compareInfo").append("404 Not Found. We are unable to find your profile. Please make sure your spelling is correct.");
                 }
@@ -464,7 +464,7 @@ $(document).ready(function () {
     //Print function
     function printDataNews(settingsNews) {
         $.ajax(settingsNews).done(function (response) {
-            console.log(response.data);
+            //console.log(response.data);
             for (let i = 0; i < 13; i++) {
                 $(`#news${i}`).append(`
     <h5>${response.data[i].title}</h5>
